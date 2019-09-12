@@ -14,7 +14,8 @@
 	},
 	"scripts": {
 		"test": "xo && ava && tsd",
-		"build": "babel index.js -d dist"
+		"build": "babel index.js -d dist",
+		"prepublishOnly": "npm run test && npm run build"
 	},
 	"files": [
 		"dist/index.js",
