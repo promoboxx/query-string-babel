@@ -1,5 +1,5 @@
 {
-	"name": "query-string-babel",
+	"name": "@promoboxx/query-string-babel",
 	"version": "6.8.3",
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
@@ -13,10 +13,11 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd"
+		"test": "xo && ava && tsd",
+		"build": "babel index.js -d dist"
 	},
 	"files": [
-		"index.js",
+		"dist/index.js",
 		"index.d.ts"
 	],
 	"keywords": [
@@ -40,10 +41,16 @@
 		"strict-uri-encode": "^2.0.0"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.6.0",
+		"@babel/core": "^7.6.0",
+		"@babel/preset-env": "^7.6.0",
 		"ava": "^1.4.1",
 		"deep-equal": "^1.0.1",
 		"fast-check": "^1.5.0",
 		"tsd": "^0.7.3",
 		"xo": "^0.24.0"
-	}
+  },
+  "browserslist": [
+    ">1%"
+  ]
 }
