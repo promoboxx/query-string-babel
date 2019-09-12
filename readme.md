@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install query-string
+$ npm install @promoboxx/query-string-babel
 ```
 
 This module targets Node.js 6 or later and the latest version of Chrome, Firefox, and Safari. If you want support for older browsers, or, [if your project is using create-react-app v1](https://github.com/sindresorhus/query-string/pull/148#issuecomment-399656020), use version 5: `npm install query-string@5`.
@@ -15,7 +15,7 @@ This module targets Node.js 6 or later and the latest version of Chrome, Firefox
 ## Usage
 
 ```js
-const queryString = require('query-string');
+const queryString = require('@promoboxx/query-string-babel');
 
 console.log(location.search);
 //=> '?foo=bar'
