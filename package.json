@@ -1,9 +1,9 @@
 {
-	"name": "query-string",
+	"name": "query-string-babel",
 	"version": "6.8.3",
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
-	"repository": "sindresorhus/query-string",
+	"repository": "promoboxx/query-string",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
