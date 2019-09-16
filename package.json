@@ -1,6 +1,6 @@
 {
 	"name": "@promoboxx/query-string-babel",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
 	"repository": "promoboxx/query-string-babel",
@@ -21,6 +21,9 @@
 	},
 	"files": [
 		"index.js",
+		"vendor/decode-uri-component.js",
+		"vendor/split-on-first.js",
+		"vendor/strict-uri-encode.js",
 		"index.d.ts"
 	],
 	"keywords": [
