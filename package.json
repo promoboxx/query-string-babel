@@ -5,7 +5,6 @@
 	"license": "MIT",
 	"repository": "promoboxx/query-string-babel",
 	"main": "dist/index.js",
-	"module": "index.js",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
@@ -21,9 +20,6 @@
 	},
 	"files": [
 		"index.js",
-		"vendor/decode-uri-component.js",
-		"vendor/split-on-first.js",
-		"vendor/strict-uri-encode.js",
 		"index.d.ts"
 	],
 	"keywords": [
