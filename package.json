@@ -4,7 +4,7 @@
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
 	"repository": "promoboxx/query-string-babel",
-	"main": "dist/index.js",
+	"module": "index.js",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
@@ -14,9 +14,7 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
-		"build": "babel index.js -d dist",
-		"prepublishOnly": "npm run test && npm run build"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",

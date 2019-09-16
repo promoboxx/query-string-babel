@@ -245,7 +245,7 @@ function parse(input, options) {
 exports.extract = extract;
 exports.parse = parse;
 
-exports.stringify = (object, options) => {
+const stringify = (object, options) => {
 	if (!object) {
 		return '';
 	}
@@ -284,9 +284,20 @@ exports.stringify = (object, options) => {
 	}).filter(x => x.length > 0).join('&');
 };
 
-exports.parseUrl = (input, options) => {
+exports.stringify = stringify
+
+const parseUrl = (input, options) => {
 	return {
 		url: removeHash(input).split('?')[0] || '',
 		query: parse(extract(input), options)
 	};
 };
+
+exports.parseUrl = parseUrl
+
+exports.default = {
+  extract,
+  parse,
+  stringify,
+  parseUrl,
+}
