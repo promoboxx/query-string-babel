@@ -1,6 +1,6 @@
 {
 	"name": "@promoboxx/query-string-babel",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
 	"repository": "promoboxx/query-string-babel",

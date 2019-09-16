@@ -161,7 +161,7 @@ function removeHash(input) {
 	return input;
 }
 
-export const extract = (input) => {
+function extract(input) {
 	input = removeHash(input);
 	const queryStart = input.indexOf('?');
 	if (queryStart === -1) {
@@ -181,7 +181,7 @@ function parseValue(value, options) {
 	return value;
 }
 
-export const parse = (input, options) => {
+function parse(input, options) {
 	options = Object.assign({
 		decode: true,
 		sort: true,
@@ -242,7 +242,10 @@ export const parse = (input, options) => {
 	}, Object.create(null));
 }
 
-export const stringify = (object, options) => {
+exports.extract = extract;
+exports.parse = parse;
+
+exports.stringify = (object, options) => {
 	if (!object) {
 		return '';
 	}
@@ -281,16 +284,9 @@ export const stringify = (object, options) => {
 	}).filter(x => x.length > 0).join('&');
 };
 
-export const parseUrl = (input, options) => {
+exports.parseUrl = (input, options) => {
 	return {
 		url: removeHash(input).split('?')[0] || '',
 		query: parse(extract(input), options)
 	};
 };
-
-export default {
-  parse,
-  parseUrl,
-  stringify,
-  extract,
-}
