@@ -1,6 +1,6 @@
 {
 	"name": "@promoboxx/query-string-babel",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Parse and stringify URL query strings",
 	"license": "MIT",
 	"repository": "promoboxx/query-string-babel",
@@ -16,8 +16,8 @@
 	},
 	"scripts": {
 		"test": "xo && ava",
-		"build": "webpack",
-		"prepublishOnly": "npm run build"
+		"build": "rollup -c",
+		"prepublish": "npm run build"
 	},
 	"files": [
 		"index.js",
@@ -38,22 +38,20 @@
 		"decode",
 		"searchparams"
 	],
-	"dependencies": {
-		"decode-uri-component": "^0.2.0",
-		"split-on-first": "^1.0.0",
-		"strict-uri-encode": "^2.0.0"
-	},
 	"devDependencies": {
 		"@babel/cli": "^7.6.0",
 		"@babel/core": "^7.6.0",
+		"@babel/plugin-external-helpers": "^7.2.0",
 		"@babel/preset-env": "^7.6.0",
 		"ava": "^1.4.1",
-		"core-js": "^3.2.1",
 		"deep-equal": "^1.0.1",
 		"fast-check": "^1.5.0",
+		"rollup": "^0.58.1",
+		"rollup-plugin-babel": "^3.0.3",
+		"rollup-plugin-commonjs": "^9.1.0",
+		"rollup-plugin-node-resolve": "^3.3.0",
+		"rollup-plugin-resolve": "0.0.1-predev.1",
 		"tsd": "^0.7.3",
-		"webpack": "^4.40.2",
-		"webpack-cli": "^3.3.8",
 		"xo": "^0.24.0"
 	},
 	"browserslist": [
